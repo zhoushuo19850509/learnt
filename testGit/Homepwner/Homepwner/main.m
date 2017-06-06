@@ -13,10 +13,10 @@
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-//         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-        NSLog(@"hello");
-        BNRItem *item = [BNRItem randomItem];
-        NSString *str = [item description];
-        NSLog(@"%@" , str);
+         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+//        NSLog(@"hello");
+//        BNRItem *item = [BNRItem randomItem];
+//        NSString *str = [item description];
+//        NSLog(@"%@" , str);
     }
 }
