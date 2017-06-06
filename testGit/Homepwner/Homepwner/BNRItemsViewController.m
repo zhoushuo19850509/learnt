@@ -18,7 +18,7 @@
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if(self){
-        for( int i = 0; i < 50 ; i++){
+        for( int i = 0; i < 5 ; i++){
             [[BNRItemStore sharedStore] createItem];
         }
     }
@@ -33,7 +33,7 @@
 // 指定table cell的数量
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[BNRItemStore sharedStore] allTtems] count];
+    return [[[BNRItemStore sharedStore] allTtems] count] + 1;
 }
 
 // 指定table cell展示的内容
@@ -42,10 +42,17 @@
 //    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
                                                      forIndexPath:indexPath];
-    NSArray *items = [[BNRItemStore sharedStore] allTtems];
-    BNRItem *item = items[indexPath.row];
+    NSInteger count = [[[BNRItemStore sharedStore] allTtems] count];
+    if(indexPath.row == count){
+        NSLog(@"reach the end of the table!");
+        cell.textLabel.text = @"No more items";
+    }else{
+        NSArray *items = [[BNRItemStore sharedStore] allTtems];
+        BNRItem *item = items[indexPath.row];
+        
+        cell.textLabel.text = [item description];
+    }
     
-    cell.textLabel.text = [item description];
     return cell;
     
 }
