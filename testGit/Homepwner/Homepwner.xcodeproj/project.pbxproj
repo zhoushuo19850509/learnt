@@ -13,6 +13,9 @@
 		ACC6BBB11EE14BD000361F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BBAF1EE14BD000361F85 /* Main.storyboard */; };
 		ACC6BBB31EE14BD000361F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BBB21EE14BD000361F85 /* Assets.xcassets */; };
 		ACC6BBB61EE14BD000361F85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC6BBB41EE14BD000361F85 /* LaunchScreen.storyboard */; };
+		ACC6BBC41EE504A600361F85 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BBC31EE504A600361F85 /* BNRItemsViewController.m */; };
+		ACC6BBC71EE505A900361F85 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BBC61EE505A900361F85 /* BNRItemStore.m */; };
+		ACC6BBC91EE509F900361F85 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6BBC81EE509F900361F85 /* BNRItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		ACC6BBB21EE14BD000361F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACC6BBB51EE14BD000361F85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACC6BBB71EE14BD000361F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACC6BBC01EE4F96300361F85 /* BNRItemsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemsViewController.h; sourceTree = "<group>"; };
+		ACC6BBC31EE504A600361F85 /* BNRItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemsViewController.m; sourceTree = "<group>"; };
+		ACC6BBC51EE5055C00361F85 /* BNRItemStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
+		ACC6BBC61EE505A900361F85 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		ACC6BBC81EE509F900361F85 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		ACC6BBCA1EE50A0600361F85 /* BNRItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,9 @@
 		ACC6BBA51EE14BD000361F85 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				ACC6BBBF1EE4F94200361F85 /* Controller */,
+				ACC6BBBE1EE4F93B00361F85 /* View */,
+				ACC6BBBD1EE4F93100361F85 /* Model */,
 				ACC6BBA91EE14BD000361F85 /* AppDelegate.h */,
 				ACC6BBAA1EE14BD000361F85 /* AppDelegate.m */,
 				ACC6BBAC1EE14BD000361F85 /* ViewController.h */,
@@ -77,6 +89,33 @@
 				ACC6BBA71EE14BD000361F85 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACC6BBBD1EE4F93100361F85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6BBC51EE5055C00361F85 /* BNRItemStore.h */,
+				ACC6BBC61EE505A900361F85 /* BNRItemStore.m */,
+				ACC6BBC81EE509F900361F85 /* BNRItem.m */,
+				ACC6BBCA1EE50A0600361F85 /* BNRItem.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ACC6BBBE1EE4F93B00361F85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ACC6BBBF1EE4F94200361F85 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6BBC01EE4F96300361F85 /* BNRItemsViewController.h */,
+				ACC6BBC31EE504A600361F85 /* BNRItemsViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC6BBC71EE505A900361F85 /* BNRItemStore.m in Sources */,
+				ACC6BBC91EE509F900361F85 /* BNRItem.m in Sources */,
 				ACC6BBAE1EE14BD000361F85 /* ViewController.m in Sources */,
 				ACC6BBAB1EE14BD000361F85 /* AppDelegate.m in Sources */,
+				ACC6BBC41EE504A600361F85 /* BNRItemsViewController.m in Sources */,
 				ACC6BBA81EE14BD000361F85 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +356,7 @@
 				ACC6BBBC1EE14BD000361F85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
